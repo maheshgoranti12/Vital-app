@@ -1,0 +1,389 @@
+.bx {
+    height: 50%;
+    margin-top: 5px;
+    
+}
+
+.card-bx {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #31412a;
+    background-color: #3e7f91;
+    height: 40vh;
+    width: 100%;
+    /* left: 2vw; */
+    /* margin: 5px; */
+    /* box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.3); */
+    z-index: 0;
+    /* border: 2px solid #3e7f91; */
+    /* border-radius: 8px; */
+    transition: 'all 0.3s ease';
+    color: white;
+    
+        /* Add transition for smooth effect */
+    
+}
+
+.final_image{
+    display: flex;
+    height: 300px;
+}
+.f_img{
+    flex: 40%;
+}
+.f_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+.Course_content{
+    flex: 60%;
+    background-color: #f4f4f4;
+    padding-left: 30px;
+    padding-top: 20px;
+    
+}
+.Course_content h1{
+    font-size: 45px;
+    font-family: "bold";
+}
+.Course_content h6{
+    font-size: 20px;
+    font-family: "regular";
+}
+.content_left{
+    display: flex;
+    flex-direction: column;
+}
+.content_left label{
+    font-size: 23px;
+    font-family: "regular";
+}
+.content_left span{
+    font-size: 27px;
+    font-family: "medium";
+}
+
+.cont_button{
+    position: relative;
+    left: 500px;
+    top: -70px;
+}
+.cont_button h5{
+    margin-left: 35px;
+    font-size: 30px;
+    font-family: "bold";
+}
+.cont_button button{
+    /* height: 87px;
+    width: 319px; */
+    height: 45px;
+    width: 150px;
+    border-radius: 6px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e7f91;
+    border: none;
+    color: white;
+    font-family: "bold";
+    font-size: 20px;
+    box-shadow: 0px 10px 13px -7px rgba(0,0,0,0.7);
+}
+
+#cm4 {
+    padding-top: 4px;
+    padding-left: 18px;
+}
+
+.mmp {
+    width: 30vw;
+    height: 100%;
+    /* border-radius: 8px; */
+    position: absolute;
+    left: 0px;
+    top: 0;
+    /* padding: 2px; */
+
+}
+
+.col-md-8 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* left: 7%; */
+}
+
+.card-bdy {
+    position: relative;
+    margin-left: 2vw;
+    text-align: start;
+    margin-top: -10vh;
+    line-height: 1.2;
+}
+
+.card-tle {
+    position: relative;
+    top: 8vh;
+    font-family: "bold";
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.card-txt {
+    font-family: "medium";
+    position: relative;
+    top: 5.5vh;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.cd-pmt {
+    left: 50%;
+    top: 6vh;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.buy-now {
+    background-color: white;
+    color: rgb(62, 127, 145);
+    border: 2px solid rgb(62, 127, 145);
+    width: 15vw;
+    height: 6.5vh;
+    position: relative;
+    border-radius: 5px;
+    font-family: "bold";
+    font-size: 18px;
+    top: 7vh;
+    left: 400px;
+    transform: translate(0%, -50%);
+}
+
+
+.buy-now:hover {
+    background-color: rgb(62, 127, 145);
+    color: white;
+    border: 3px solid white;
+}
+
+
+
+.cc {
+    margin-left: 5vw;
+    color: black;
+    margin-top: 30px;
+}
+
+.cc-1 {
+    font-family: 'bold';
+    font-size: 32px;
+
+}
+
+.cc-12 {
+    font-family: "regular";
+    font-size: 22px;
+}
+
+.dd {
+    width: 55vw;
+    margin-left: 5vw;
+    font-weight: 500;
+}
+#chapterName{
+    font-family: "medium";
+    font-size: 16px;
+}
+.subChapter_txt{
+    font-family: "regular";
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.dd-1 {
+    background-color: white;
+    padding: 1vh;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+}
+
+.dd-2 {
+    display: none;
+    padding: 1vh;
+    margin-left: 5vw;
+
+}
+
+.dd-2,
+.opn {
+    display: block;
+    border-top: 1.5px solid #ccc;
+    width: 102%;
+    margin-left: -6px;
+    margin-top: 6px;
+}
+
+.chpt-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 2vw;
+    margin-right: 3vw;
+    font-size: 20px;
+}
+
+.subchtp-btn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 7vw;
+}
+
+.buy-now1 {
+    background-color: white;
+    color: rgb(62, 127, 145);
+    border: 2px solid rgb(62, 127, 145);
+    width: 15vw;
+    height: 7vh;
+    position: absolute;
+    font-family: "bold";
+    font-size: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buy-now1,
+.enroll1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.5vh;
+}
+
+.buy-now1:hover {
+    background-color: rgb(62, 127, 145);
+    color: white;
+}
+
+.playcircle {
+    color: #494f50;
+    font-size: 20px;
+    position: absolute;
+    left: 100px;
+    margin-top: -4px;
+}
+
+/* Coursepage.css */
+@media only screen and (max-width: 300px) {
+    .mob_card {
+        margin-top: 2px;
+        z-index: 1;
+        /* border: 1px solid black; */
+    }
+
+    .img_course {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .img_course img {
+        height: 29vh;
+    }
+
+    .card-bdy23 {
+        text-align: center;
+    }
+
+    .card-title_23 {
+        width: 100%;
+        margin-top: -50px;
+    }
+
+    .card-txt23 {
+        text-align: justify;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .cd-pmt23 {
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .buy-now23 {
+        background-color: white;
+        color: rgb(62, 127, 145);
+        border: 2px solid rgb(62, 127, 145);
+        width: auto;
+        height: auto;
+        border-radius: 0px;
+        font-family: "bold";
+        font-size: 19px;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .cc-1 {
+        
+        text-align: start;
+        font-size: 28px;
+    }
+
+    .cc-12 {
+        
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .dd {
+        width: 90%;
+        font-family: 'regular';
+        font-weight: 500;
+    }
+   
+    .dd-1 {
+        background-color: white;
+        padding: 1vh;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        text-align: start;
+      
+    }
+
+    .dd-2 {
+        display: none;
+        padding: 1vh;
+        margin-left: 5vw;
+        
+    }
+
+    .dd-2,
+    .opn {
+        display: block;
+        border-top: 1.5px solid #ccc;
+        width: 105%;
+        margin-left: -6px;
+        margin-top: 6px;
+    }
+
+    
+    .subChapter_txt{
+        margin-left: 16px;
+    }
+    .playcircle {
+        color: #494f50;
+        font-size: 20px;
+        left: 31px;
+    }
+    
+}

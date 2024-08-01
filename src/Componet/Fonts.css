@@ -1,0 +1,26 @@
+/* text changes into mirai */
+@font-face {
+    font-family: "bold";
+    src: url(G:\NewReactAmrut\vital-app\src\Miraifont\mirai-bold.ttf);
+  }
+
+  @font-face {
+    font-family: "light";
+    src: url(G:\NewReactAmrut\vital-app\src\Miraifont\mirai-light.ttf);
+  }
+
+  @font-face {
+    font-family: "regular";
+    src: url(G:\NewReactAmrut\vital-app\src\Miraifont\mirai-regular.ttf);
+  }
+  
+  @font-face {
+    font-family: "black";
+    src: url(G:\NewReactAmrut\vital-app\src\Miraifont\mirai-black.ttf);
+  }  
+
+  @font-face {
+    font-family: "medium";
+    src: url(G:\NewReactAmrut\vital-app\src\Miraifont\mirai-medium.ttf);
+  }  
+  

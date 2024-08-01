@@ -1,0 +1,135 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    
+}
+
+footer{
+    
+    color: white;
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(1, 20vw);
+    grid-template-columns: repeat(4, 10vh) ;
+    grid-gap: 15vw;
+   
+   margin-left: 20vw;
+}
+.compfoot{
+    padding-top: 3rem;
+    width: 100%;
+    background-color: #3e7f91;
+
+}
+.f1, .f2, .f4{
+    width: 300px;
+}
+.f4 a{
+    display: inline;
+    
+   padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+  
+@media (max-width:768px) {
+
+   footer{
+    
+    color: white;
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(1, 20vw);
+    grid-template-columns: repeat(4, 10vh) ;
+    grid-gap: 10vw;
+
+   margin-left: 5vw;
+}
+.compfoot{
+    padding-top: 3rem;
+    width: 100%;
+    background-color: #3e7f91;
+    height: 26vh;
+
+} 
+.f4 a{
+    display: inline;
+    padding: 6px;
+    font-size: 30px;
+
+}
+.f1, .f2, .f4{
+    width: 200px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    footer{
+    
+        color: white;
+        width: 90%;
+        display: grid;
+        grid-template-rows: repeat(1, 20vw);
+        grid-template-columns: repeat(4, 10vh) ;
+        grid-gap: 15vw;
+    
+       margin-left: 10vw;
+    }
+    .compfoot{
+        padding-top: 3rem;
+        width: 100%;
+        background-color: #3e7f91;
+        height: 30vh;
+    
+    } 
+    .f4 a{
+        display: inline;
+        padding: 6px;
+        font-size: 40px;
+    
+    }
+    .f1, .f2, .f4{
+        width: 200px;
+        font-size: 25px;
+    }
+} */
+
+
+/* App.css */
+
+/* Add your global styles here if needed */
+
+footer {
+    padding: 2rem 0;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1140px;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  /* Adjust styles for the social icons */
+  .text-center .fa-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Add any additional styling as per your design requirements */
+  

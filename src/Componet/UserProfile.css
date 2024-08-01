@@ -1,0 +1,166 @@
+.profile-container_user {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+ 
+  .sidebar_user {
+    position: absolute;
+    left: 12.5%;
+    margin-top: 90px;
+    width: 200px;
+    
+    padding: 1.25%;
+    background-color: #3e7f91;
+    color: #ecf0f1;
+    border-radius: 50px;
+     top: 6.5%;
+  }
+  
+  .avatar-container_user {
+     /* Corrected line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar-container_user img {
+    border: 2.5px solid #fff; 
+    border-radius: 50%;
+    margin-top: 10%;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 2%;
+  }
+  
+  .avatar-container_user img:hover {
+    transform: scale(1.1);
+  }
+  
+  .user{
+  
+    margin-bottom: 0%;
+    font-weight: bold;
+  }
+  
+  .useri{
+    align-items: center;
+  
+  }
+  
+  
+  .nav-items_user {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-bottom: 50%;
+  }
+  
+  .dash_user
+  {
+    margin-bottom: 15%;
+    font-weight: bold;
+  }
+  
+  .nav-item_user {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .nav-item_user label {
+    margin-bottom: 10%;
+    margin-left: 10%;
+  }
+  
+  .white-icon_user {
+    margin-left: 10%;
+  }
+  
+  
+  .main-content_user {
+    position: relative;
+    left: 200px;
+    left: 30%;
+    padding: 1%;
+    margin-top: 2.5%;
+    flex-grow: 1;
+    overflow: auto;
+    height: 105vh;
+  }
+  
+  .card-header_user {
+    width: 51%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1% 2%;
+    background-color: #3e7f91;
+    color: #fff;
+    border-bottom: 1px solid #3e7f91;
+    font-weight: bold;
+    font-size: larger;
+    
+  }
+  
+  .card-body_user {
+    width: 50%;
+    padding: 2.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-bottom: 2.5%;
+  }
+  
+  .profile-card_user input {
+    width: 75%;
+    padding: 2.5%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 2.5%;
+  }
+  
+  .form-row_user {
+    display: flex;
+  }
+  
+  .form-row_user label {
+    flex-basis: 25%; 
+    margin-top: 2%;
+  }
+  
+  .form-control_user {
+    width: 15%;
+    padding: 1%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 2.5%;
+  }
+  
+  .buttons-container_user {
+    display: flex;
+    margin-bottom: 3.125%;
+  
+    button {
+      padding: 1%;
+      cursor: pointer;
+      background-color: #3e7f91;
+      color: #fff;
+      font-weight: bold;
+      font-size: larger;
+      width: 27.5%;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+      border: 2px solid #3e7f91;
+      
+    }
+  
+    button:hover {
+      background-color: #fff;
+      color: #3e7f91;
+      border: 2px solid #3e7f91;
+      font-weight: bold;
+    font-size: larger;
+    }
+  }
+  

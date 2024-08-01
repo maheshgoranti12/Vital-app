@@ -1,0 +1,12 @@
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+
+.login-form,
+.signup-form {
+  z-index: 100;
+}

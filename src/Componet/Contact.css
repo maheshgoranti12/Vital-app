@@ -1,0 +1,206 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
+.big-box {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-column {
+  background-color: #f4f4f4;
+  width: 310px;
+  padding: 60px;
+  box-sizing: border-box;
+  height: 500px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.additional-box {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  padding: 15px;
+}
+
+.address-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact-details {
+  margin-top: 45px;
+  color: black;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+  color: black;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.contact-icon {
+  color: black;
+  font-size: large;
+  margin-bottom: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  padding: 10px;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  flex: 1; /* Take remaining space */
+  text-align: center;
+}
+
+.contact-item p {
+  font-size: 20px;
+  padding-right: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.map-column {
+  background-color: white;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.map-container {
+  width: 100%; /* Use full width */
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container iframe {
+  width: 100%; /* Use full width */
+  height: 100%; /* Use full height */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.office-title {
+  color: #494f50;
+  font-size: x-large;
+  text-align: center;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.input-form {
+  --width-of-input: 200px;
+  --border-height: 2px;
+  --border-before-color: #494f50;
+  --border-after-color: #494f50;
+  --input-hovered-color: #494f50;
+  position: relative;
+  width: var(--width-of-input);
+  margin: 10px 0;
+  color: #494f50;
+  text-align: center;
+}
+
+.input {
+  color: #494f50;
+  font-size: medium;
+  background-color: transparent;
+  width: 170px;
+  box-sizing: border-box;
+  padding-inline: 0.2em;
+  padding-block: 0.9em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  margin-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+.input::placeholder {
+  color: #494f50;
+  font-size: medium;
+  bottom: 20px;
+}
+
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: var(--border-height);
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+  color: #494f50;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn12 {
+  background-color: #494f50;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 110px;
+  margin-top: 50px;
+  margin-left: 38px;
+}
+
+@media only screen and (max-width: 767px) {
+  .big-box {
+    flex-direction: column;   
+    display: inline-flexbox; 
+    position: relative;
+  }
+  .form-column{
+    display: flexbox;
+    position: relative;
+    width: 40vw;
+    text-align: center;
+    margin: auto;  
+    font-size: 2rem;
+
+  }
+  .additional-box{
+    display: inline;
+    position: relative;
+    text-align: start;
+  }
+  .map-container {
+    height: 300px; /* Adjust height as needed for mobile view */
+  }
+
+  .map-container iframe {
+    width: 100%; /* Use full width */
+    height: 100%; /* Use full height */
+  }
+}

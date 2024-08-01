@@ -1,0 +1,302 @@
+.final_signup{
+    height: 100%;
+    width: 100%;
+}
+.left_signup{
+    width: 34%;
+    height: calc(1440px - 75px);
+    background-color: #3e7f91;   
+}
+/* image */
+.border_logo{
+    height: 41%;
+    width: 84%;
+    position: relative;
+    top: 17%;
+    left: 20%;
+}
+.left_signup_logo h1{
+    font-size: 6rem;
+    font-family: "bold";
+    color: transparent;
+    -webkit-text-stroke: 1.8px white;
+    text-shadow: none;
+    text-align: center;
+    margin-top: 18%;
+    margin-left: 25%;
+}
+.left_signup_logo h5{
+    font-size: 2.3rem;
+    font-family: "medium";
+    text-align: center;
+    margin-left: 26%;
+}
+.right_signup{
+    position: absolute;
+    top: 13.4%;
+    left: 10%;
+    height: 85%;
+    width: 78%;
+    border: 2px solid white;
+    box-shadow: 0px 2px 15px 3px rgba(0,0,0,0.3);
+    display: flex;
+}
+.left_signup_logo{
+    flex: 28%;
+    color: white;
+    left: -4.5%;
+    position: relative;
+
+}
+
+.right_form_signup{
+    flex: 65%;
+    font-family: "regular";
+    margin-top: 1%;
+    
+}
+.right_form_signup h1{
+    text-align: center;
+    justify-content: center;
+    font-family: "bold";
+    font-size: 5.3rem;
+}
+.form_content_signup{
+    position: relative;
+    left: 12%;
+    margin-top: -2%;
+}
+label{
+    font-size: 3.4rem;
+}
+
+.signup_user, .signup_pass,.signup_fullname, .signup_email, .signup_mobile{
+    padding-left: 8%;
+    border: none;
+    outline: none;
+    background: #f4f4f4;
+    width: 74%;
+    height: 6rem;
+    font-size: 3rem;
+    
+}
+.button_signup{
+    height: 6.5rem;
+    width: 30%;
+    border: none;
+    background-color: #3e7f91;   
+    color: white;
+    font-family: "medium";
+    font-size: 3.9rem;
+    border-radius: 15px;
+    position: relative;
+    left: 22%;
+    /* margin-top: 1%; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.sign_wrapper{
+    display: flex;
+    position: relative;
+}
+.sign_icon{
+    position: absolute;
+    left: 2.5%;
+    top: 13%;
+    font-size: 3rem;
+}
+.MdOutlineEmail{
+    font-size: 4rem;
+}
+
+.final_signup {
+    height: 100%;
+    width: 100%;
+}
+
+.left_signup {
+    width: 100%;
+    height: auto;
+    background-color: #3e7f91;
+}
+
+.border_logo {
+    height: 30%;
+    width: 100%;
+}
+
+.left_signup_logo h1 {
+    font-size: 4vw; /* Using vw unit for dynamic font size */
+    margin-top: 10%;
+    margin-left: 0;
+}
+
+.left_signup_logo h5 {
+    font-size: 1.8vw; /* Using vw unit for dynamic font size */
+    margin-left: 0;
+}
+
+.right_signup {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+.left_signup_logo {
+    flex: none;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.right_form_signup {
+    flex: none;
+    width: 100%;
+    margin-top: 0;
+}
+
+.right_form_signup h1 {
+    font-size: 3vw; /* Using vw unit for dynamic font size */
+}
+
+.form_content_signup {
+    left: 0;
+    margin-top: 0;
+}
+
+label {
+    font-size: 2vw; /* Using vw unit for dynamic font size */
+}
+
+.signup_user,
+.signup_pass,
+.signup_fullname,
+.signup_email,
+.signup_mobile {
+    padding-left: 4%;
+    width: 92%;
+    height: 4vw; /* Using vw unit for dynamic font size */
+    font-size: 2vw; /* Using vw unit for dynamic font size */
+}
+
+.button_signup {
+    height: 4.5vw; /* Using vw unit for dynamic font size */
+    width: 60%;
+    left: 20%;
+    font-size: 2.5vw; /* Using vw unit for dynamic font size */
+}
+
+.sign_icon {
+    font-size: 2vw; /* Using vw unit for dynamic font size */
+}
+
+@media only screen and (min-width: 600px) {
+    .left_signup {
+        width: 50%;
+    }
+
+    .border_logo {
+        height: 20%;
+    }
+
+    .left_signup_logo h1 {
+        font-size: 5rem;
+    }
+
+    .left_signup_logo h5 {
+        font-size: 2rem;
+    }
+
+    .right_signup {
+        height: auto;
+    }
+
+    .signup_user,
+    .signup_pass,
+    .signup_fullname,
+    .signup_email,
+    .signup_mobile {
+        padding-left: 2%;
+    }
+
+    .button_signup {
+        width: 50%;
+        left: 25%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .left_signup_logo h1 {
+        font-size: 6vw;
+    }
+
+    .left_signup_logo h5 {
+        font-size: 2.3vw;
+    }
+
+    .right_signup {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .left_signup_logo h1 {
+        font-size: 6vw;
+    }
+
+    .left_signup_logo h5 {
+        font-size: 2.3vw;
+    }
+
+    .right_signup {
+        left: 10%;
+        width: 78%;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .left_signup {
+        width: 40%;
+    }
+
+    .left_signup_logo h1 {
+        font-size: 6rem;
+    }
+
+    .left_signup_logo h5 {
+        font-size: 2.3rem;
+    }
+
+    .right_signup {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .left_signup {
+        width: 34%;
+    }
+
+    .left_signup_logo h1 {
+        font-size: 6rem;
+    }
+
+    .left_signup_logo h5 {
+        font-size: 2.3rem;
+    }
+
+    .right_signup {
+        left: 10%;
+        width: 78%;
+    }
+}

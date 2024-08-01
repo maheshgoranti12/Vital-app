@@ -1,0 +1,181 @@
+.navbar {
+  box-shadow: 0 6px 20px -10px black;
+}
+
+.img {
+  height: auto;
+  display: inline-table;
+  cursor: pointer;
+}
+
+.vitalcode {
+  background: linear-gradient(to right, #7ac5da, #3e7f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'bold';
+  cursor: pointer;
+}
+
+.inline-text {
+  display: inline-table;
+}
+
+.nav_btn {
+  list-style: none;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.nav_btn li {
+  display: inline-block;
+}
+
+.bars,
+.sidebar {
+  display: none;
+}
+
+#Quiz {
+  color: #494f50;
+  font-family: "light";
+  display: inline-block;
+}
+
+#Contact {
+  color: #494f50;
+  font-family: "light";
+  display: inline-block;
+}
+
+#Login {
+  color: #494f50;
+  border: 2px solid #3e7f91;
+  font-family: "bold";
+  display: inline-block;
+  background-color: white;
+}
+
+#Signup {
+  color: white;
+  background-color: #3e7f91;
+  font-family: "bold";
+  display: inline-block;
+  border: 2px solid #3e7f91;
+}
+
+#Courses {
+  color: #494f50;
+  font-family: "bold";
+
+}
+
+
+.link {
+  text-decoration: none;
+  /* Remove default underline */
+  /* Make sure it inherits the color */
+}
+
+.link:hover {
+  text-decoration: none;
+  /* Remove underline on hover */
+}
+
+.link button {
+  text-decoration: none !important;
+}
+
+.link button:hover {
+  text-decoration: none !important;
+}
+
+
+/* Large Tablets (992px to 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .img {
+    width: 3vw;
+    margin-left: 2.5vw;
+  }
+
+  .vitalcode {
+    font-size: 2.2vw;
+    position: absolute;
+    top: 0.3rem;
+  }
+
+  #Login,
+  #Signup {
+    font-size: 1.1vw;
+    border-radius: 0.375vw;
+    padding: 0.5vw 0.875vw;
+  }
+
+  .navbar {
+    border-bottom: 0.15vw solid transparent;
+    border-top: 0.15vw solid transparent;
+  }
+
+  #Contact,
+  #Quiz {
+    font-size: 1.3vw;
+  }
+
+  .inline-text {
+    margin-top: 0.4vw;
+    margin-left: 0.938vw;
+  }
+
+  .nav_btn {
+    right: 2vw;
+
+  }
+
+  .nav_btn li {
+    margin: 0px 0.938vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .img {
+    width: 3vw;
+    margin-left: 2.5vw;
+  }
+
+  .vitalcode {
+    font-size: 2.2vw;
+    position: absolute;
+    top: 0.3rem;
+  }
+
+  #Login,
+  #Signup {
+    font-size: 1.1vw;
+    border-radius: 0.375vw;
+    padding: 0.5vw 0.875vw;
+  }
+
+  .navbar {
+    border-bottom: 0.15vw solid transparent;
+    border-top: 0.15vw solid transparent;
+  }
+
+  #Contact,
+  #Quiz {
+    font-size: 1.3vw;
+  }
+
+  .inline-text {
+    margin-top: 0.4vw;
+    margin-left: 0.938vw;
+  }
+
+  .nav_btn {
+    right: 2vw;
+
+  }
+
+  .nav_btn li {
+    margin: 0px 0.938vw;
+  }
+}

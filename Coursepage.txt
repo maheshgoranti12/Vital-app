@@ -1,0 +1,380 @@
+import React, { useState, useEffect } from 'react';
+import './Coursepage.css';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import ScrollBox from './ScrollBox';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import Login from './Popup/Login.jsx';
+import Signup from './Popup/Signup.jsx';
+import { useCourse } from './CourseContext.jsx';// Import the useCourse hook
+import { useMediaQuery } from 'react-responsive';
+
+const Coursepage = ({ disabled, onGoBack, targetRef }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  // Use react-responsive to determine the screen width
+  const isMobileScreen = useMediaQuery({ maxWidth: 767 });
+
+  useEffect(() => {
+    // Update state based on screen width
+    setIsMobile(isMobileScreen);
+  }, [isMobileScreen]);
+
+  const { selectedCourse, imageSrc } = useCourse(); // Use the useCourse hook to access context
+
+  const [showCoursePage, setShowCoursePage] = useState(false);
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const handleSwitchToSignUP = () => {
+    setIsLoginOpen(false);
+    setIsSignUpOpen(true);
+  };
+  const handleSwitchToLogin = () => {
+    setIsLoginOpen(true);
+    setIsSignUpOpen(false);
+  };
+  const handleLogin = () => {
+    if (isLoginOpen) {
+      // User is logged in, proceed with enrollment or any other action
+      // For now, let's just hide the CoursePage
+      setShowCoursePage(false);
+    } else {
+      // User is not logged in, show the login component
+      // You may want to customize this part based on your login component structure
+      // Here, I'm just toggling the visibility of the login component
+      setIsLoginOpen(true);
+    }
+  };
+
+
+
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // empty dependency array means it runs once after initial render
+
+
+  const initialDropdowns = {
+    "01: introduction Java": false,
+    "02: First step towrds java": false,
+    "03: JVM archtiteure view": false,
+    "04: Data Types,Opreator &  Variables": false,
+    "05: Control Statements": false,
+    "06: Input Output": false,
+    "07: Array & Strings": false,
+    "08: Classes & Objects": false,
+    "09: Inheritance": false,
+    "10: Polymorphism": false,
+
+  };
+
+  const [chapters, setChapters] = useState(initialDropdowns);
+
+  const toggleChapter = (chapterName) => {
+    setChapters({
+      ...chapters,
+      [chapterName]: !chapters[chapterName],
+    });
+  };
+
+  const subChaptersData = {
+    "01: introduction Java": [
+      "01: Overview of programing",
+      "02: Java Overview-01",
+    ],
+    "02: First step towrds java": [
+      "03: Java Overview-02",
+      "04: Java Overview-03",
+    ],
+    "03: JVM archtiteure view": [
+      "05: JVM Overview ",
+      "06: JVM Archtiture-01",
+      "07: JVM Archtiture-02",
+      "08: JVM Archtiture-03",
+    ],
+    "04: Data Types,Opreator &  Variables": [
+      "09: Main Method In Java",
+      "10: Intrdocution java-02",
+      "11: Data Types-01",
+      "12: Data Types-02",
+      "13: Data Types-03",
+    ],
+    "05: Control Statements": [
+      "14: While loop, For Loop, Do while loop",
+      "15: If else",
+      "16: If else Basic",
+      "17: If else Statement",
+      "18: For Loop",
+      "19: While Loop",
+      "20: Do while Loop",
+    ],
+    "06: Input Output": [
+      "21: I/O Scanner-01",
+      "22: I/O Scanner-02",
+      "23: I/O Scanner-03",
+      "24: Nested for-01",
+      "25:  Nested for-02",
+    ],
+    "07: Array & Strings": [
+      "26: Array -01",
+      "27: Array -02",
+      "28: Array -03",
+      "29: Commond Line Argument",
+    ],
+    "08: Classes & Objects": [
+      "30: Intrdocution OOps",
+      "31: Inheitance",
+      "32: Abstraction",
+      "33: Polymorphism",
+      "34: Encapsultion",
+    ],
+    "09: Inheritance": [
+      "35: Inheritance-01",
+      "36: Inheritance-02",
+      "37: Inheritance-03",
+      "38: Inheritance-04",
+    ],
+    "10: Polymorphism": [
+      "39: Polymorphism-01",
+      "40: Polymorphism-02",
+    ],
+  };
+  return (
+    <>
+      <ScrollBox />
+
+      <div ref={targetRef} className={`ide`}>
+        {isMobile ? (
+          <div className='mob_card'>
+            <div className='img_course'>
+              <img src={imageSrc} alt="error" />
+
+            </div>
+            <div >
+              <div className="card-bdy23">
+                <h5 className="card-title_23 ">
+                  {selectedCourse?.title || 'Course Title'} 
+                   (Duration {selectedCourse?.duration || 'Duration'})
+                </h5>
+                <p className="card-txt23">
+                  {selectedCourse?.description || 'description'}
+                </p>
+                <h5 className='cd-pmt23'>₹{selectedCourse?.price || 'Price'} /- (50%-off)</h5>
+                <button className="buy-now23" onClick={handleLogin}>
+                  Enroll Now
+                </button>
+                 {/* Show login component if not logged in */}
+            {isLoginOpen && <Login onClose={() => setIsLoginOpen(false)} onSwitch={handleSwitchToSignUP} />}
+            {isSignUpOpen && <Signup onClose={() => setIsSignUpOpen(false)} onSwitch={handleSwitchToLogin} />}
+
+              </div>
+            </div>
+          </div>
+          
+        ) : (
+              <div className="bx">
+
+          <div className={`card-bx `} >
+           
+              <div className={`row`}>
+                <div className="col-md-4" id='cm4'>
+                  <img src={imageSrc} alt="error" className='mmp' />
+
+                </div>
+                <div className="col-md-8">
+                  <div className="card-bdy">
+                    <h5 className="card-tle">
+                      {selectedCourse?.title || 'Course Title'} <br /> (Duration &nbsp;
+                      {selectedCourse?.duration || 'Duration'})
+                    </h5>
+                    <p className="card-txt">
+                      {selectedCourse?.description || 'description'}
+                    </p>
+                    <h5 className='cd-pmt'>₹{selectedCourse?.price || 'Price'} /- (50%-off)</h5>
+                    <button className="buy-now" onClick={handleLogin}>
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            {/* Show login component if not logged in */}
+            {isLoginOpen && <Login onClose={() => setIsLoginOpen(false)} onSwitch={handleSwitchToSignUP} />}
+            {isSignUpOpen && <Signup onClose={() => setIsSignUpOpen(false)} onSwitch={handleSwitchToLogin} />}
+
+          </div>
+
+        </div>)}
+
+        <div className="cc">
+          <p className='cc-1'>Course Content</p>
+          <p className='cc-12'>23 sections • 281 lectures • 14h 57m total length</p>
+        </div>
+
+        <div className="cbx">
+          {Object.keys(initialDropdowns).map((chapterName) => (
+            <div className="dd" key={chapterName}>
+              <div className="dd-1" onClick={() => toggleChapter(chapterName)} >
+                <button className="chpt-btn" >
+                  <div className="top-down">
+                    {chapters[chapterName] ? (
+                      <FaChevronUp size={13} className="ChevronUp" />
+                    ) : (
+                      <FaChevronDown size={13} className="ChevronDown" />
+                    )}
+                  </div>
+                </button>
+                <span id='chapterName'>{chapterName}</span>
+
+                {chapters[chapterName] && (
+                  <div className={`dd-2 ${chapters[chapterName] ? 'opn' : ''}`}>
+                    {subChaptersData[chapterName] &&
+                      subChaptersData[chapterName].map((subChapter, index) => (
+                        <div key={index} className="subchtp-btn">
+                          <span className='playcircle'><PlayCircleOutlineIcon />
+                          </span>
+                          <span className='subChapter_txt'>{subChapter}</span></div>
+                      ))}
+                  </div>
+                )}
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+
+        <br /><br />
+
+      </div>
+    </>
+  );
+}
+
+export default Coursepage;
+
+
+
+//Navbar.jsx
+
+
+<li><button type="button" onClick={handleLoginButton} className="btn btn-outline" id='Login'>
+              Log in</button></li>
+
+            <li><button type="button" onClick={onFormSignUpToggle} className="btn" id='Signup'>Sign up
+            </button></li>
+
+
+
+
+App.jsx
+
+
+import React, { useState, useEffect, useRef } from 'react';
+import Navbar from './Componet/Navbar';
+import { Route, Routes } from "react-router-dom";
+import Footer from './Componet/Footer';
+import Login from './Componet/Popup/Login.jsx';
+import Signup from './Componet/Popup/Signup.jsx';
+import Cardslider from './Componet/Cardslider.jsx';
+import Coursepage from './Componet/Coursepage.jsx';
+import './App.css';
+import Contact from './Componet/Contact.jsx';
+import Quiz from './Componet/Quiz.jsx';
+import { CourseProvider } from './Componet/CourseContext.jsx';
+import UserProfile from './Componet/UserProfile.jsx';
+function App() {
+  const [showCoursePage, setShowCoursePage] = useState(false);
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const targetRef = useRef(null);
+
+  const handleBuyClick = () => {
+    setShowCoursePage(true);
+  };
+
+  const handleGoBack = () => {
+    setShowCoursePage(false);
+  };
+
+  const handleSwitchToSignUP = () => {
+    setIsLoginOpen(false);
+    setIsSignUpOpen(true);
+  };
+
+  const handleSwitchToLogin = () => {
+    setIsLoginOpen(true);
+    setIsSignUpOpen(false);
+  };
+
+  const onFormLoginToggle = () => {
+    setIsLoginOpen(!isLoginOpen);
+
+  };
+  const onFormSignUpToggle = () => {
+    setIsSignUpOpen(!isSignUpOpen);
+
+  };
+  const onGoBack = () => {
+    setShowCoursePage(false);
+    // console.log('hii');
+  };
+
+
+  return (
+    <>
+      <Navbar
+        onFormLoginToggle={onFormLoginToggle}
+        onFormSignUpToggle={onFormSignUpToggle}
+        scrollToTarget={targetRef}
+
+      />
+      {/* <ScrollBox /> */}
+      {isLoginOpen && <Login onClose={() => setIsLoginOpen(false)} onSwitch={handleSwitchToSignUP} />}
+      {isSignUpOpen && <Signup onClose={() => setIsSignUpOpen(false)} onSwitch={handleSwitchToLogin} />}
+
+    
+      <CourseProvider>
+        <Routes>
+
+          <Route
+            path='/'
+            element={<Cardslider targetRef={targetRef} disabled={isLoginOpen || isSignUpOpen} onButtonClick={handleBuyClick} />}
+          />
+          <Route
+            path='/contact'
+            element={<Contact targetRef={targetRef} />}
+          />
+          <Route
+            path='/login'
+            element={<Login />}
+          />
+          <Route
+            path='/signup'
+            element={<Signup />}
+          />
+          <Route
+            path='/coursepage'
+            element={<Coursepage targetRef={targetRef} onFormLoginToggle={onFormLoginToggle}
+              onFormSignUpToggle={onFormSignUpToggle} />}
+          />
+          <Route
+            path='/quiz'
+            element={<Quiz />}
+          />
+           <Route
+            path='/userprofile'
+            element={<UserProfile/>}
+          />
+        
+        </Routes>
+      </CourseProvider>
+      <Footer />
+    </>
+  );
+}
+
+export default App;
+
+
